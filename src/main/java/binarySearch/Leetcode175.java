@@ -7,7 +7,8 @@
  */
 package binarySearch;
 
-import java.util.Arrays;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author lujianhong
@@ -30,6 +31,8 @@ public class Leetcode175 {
         }
         return right;
     }
+
+
 
     private boolean check(int[] houses, int[] heaters, int x) {
         int n = houses.length;

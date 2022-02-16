@@ -1,10 +1,4 @@
-/**
- * FileName: FileSystem
- * Author:   Jianhongl
- * Date:     15/12/21 11:18 pm
- * Description:
- * History:
- */
+package systemDesign;
 
 import java.util.HashMap;
 import java.util.Map;
