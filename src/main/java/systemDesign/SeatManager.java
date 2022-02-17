@@ -7,6 +7,7 @@
  */
 package systemDesign;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -14,22 +15,21 @@ import java.util.PriorityQueue;
  * @create 17/2/2022
  * @since 1.0.0
  */
-public class Leetcode1845 {
-    private PriorityQueue<Integer> seatsChoice;
+public class SeatManager {
+    private final PriorityQueue<Integer> seatsChoice;
 
     public SeatManager(int n) {
-        seatsChoice = new PriorityQueue<>(n, (a, b) -> a < b);
+        seatsChoice = new PriorityQueue<>(n);
         for (int i = 0; i < n; i++) {
             seatsChoice.offer(i + 1);
         }
     }
 
     public int reserve() {
-        return seatsChoice.popFirst();
+        return seatsChoice.poll();
     }
 
     public void unreserve(int seatNumber) {
         seatsChoice.add(seatNumber);
     }
-
 }
